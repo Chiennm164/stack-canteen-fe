@@ -1,0 +1,102 @@
+.dish {
+    .dish-wrap {
+        background-color: #fff;
+        padding: 16px;
+        border-radius: 10px;
+        margin: 12px 0;
+        .dish-wrap-p {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            .dish-img {
+                padding-right: 16px;
+                position: relative;
+                img {
+                    min-width: 140px;
+                    max-height: 120px;
+                    border-radius: 10px;
+                    object-fit: cover;
+                }
+                span {
+                    position: absolute;
+                    left: 5%;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    width: 32px;
+                    height: 32px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    top: 5%;
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                        fill: #2d5d8c;
+                    }
+                }
+            }
+            .content {
+                display: flex;
+                flex-direction: column;
+                color: #888884;
+
+                span {
+                    padding-right: 8px;
+                }
+                .title {
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 30px;
+                    color: #22232f;
+                    padding-bottom: 4px;
+                }
+                .review {
+                    display: flex;
+                    padding-bottom: 5px;
+                    .star {
+                        padding-right: 17px;
+                        span {
+                            svg {
+                                fill: #f2c94c;
+                            }
+                        }
+                    }
+                    .time {
+                        display: inline-block;
+                    }
+                }
+                .check {
+                    display: flex;
+                    padding-bottom: 8px;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 8px;
+                    color: #ed4941;
+                }
+                .price {
+                    color: #2d5d8c;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+            }
+            .btn-card {
+                position: absolute;
+                bottom: 0%;
+                right: 0%;
+                background-color: #25da37;
+                border-radius: 10px;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                svg {
+                    fill: #fff;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}

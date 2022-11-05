@@ -1,6 +1,15 @@
+import { BackLayout } from "~/components/Layout"
+
 function FeedBackPage() {
 
-     return (<h1>FeedBackPage  nè</h1>)
+     return (
+          <div>
+               <BackLayout />
+               <h1>
+                    FeedBackPage  nè
+               </h1>
+          </div>
+     )
 }
 
 export default FeedBackPage

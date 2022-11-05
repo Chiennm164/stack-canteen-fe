@@ -1,6 +1,11 @@
+import { BackLayout } from "~/components/Layout"
+
 function SupportPage() {
 
-     return (<h1>SupportPage  nè</h1>)
+     return (<div>
+          <BackLayout />
+          <h1>SupportPage  nè</h1></div>
+     )
 }
 
 export default SupportPage

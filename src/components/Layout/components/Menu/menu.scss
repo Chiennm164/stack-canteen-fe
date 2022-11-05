@@ -1,0 +1,41 @@
+#menu {
+     background-color: #f7f7f7;
+     padding: 16px 0;
+    .wrap {
+        display: flex;
+        justify-content: center;
+        a {
+          letter-spacing: 0.5px;
+            padding: 6px 24px;
+            color: #444;
+            background-color: #ededed;
+            border-radius: 45px;
+            margin-right: 16px;
+            text-transform: capitalize;
+            &:last-child {
+                margin-right: 0;
+                display: flex;
+                margin-left: 16px;
+                position: relative;
+                align-items: center;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    height: 100%;
+                    left: -16px;
+                    top: 0;
+                    width: 1px;
+                    background-color: #dbdbdb;
+                }
+                span {
+                    padding-right: 10px;
+                }
+            }
+            &:hover {
+                background-color: #f5c031;
+                color: #fff;
+            }
+        }
+    }
+}

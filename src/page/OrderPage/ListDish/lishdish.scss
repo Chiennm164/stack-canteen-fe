@@ -1,0 +1,55 @@
+#listDish {
+    background-color: #f4f4f4;
+    .paging {
+     padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        .paging-btn-left,
+        .paging-btn-right {
+            margin: 0 4px;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            span {
+                padding:4px 8px;
+                border: 1px solid #dfe3e8;
+                border-radius: 8px;
+                background-color: #fff;
+
+                svg {
+                }
+                &:hover {
+                    background-color: #ccc;
+                    color: #fff;
+                }
+            }
+        }
+        .paging-content {
+            .wrap {
+                display: flex;
+                align-items: center;
+                button {
+                    margin: 0 4px;
+                    // padding:4px 16px;
+                    border: 1px solid #cccc;
+                    border-radius: 10px;
+                    color: #212b36;
+                    background-color: #fff;
+                    font-size: 14px;
+                    font-weight: 700;
+                    width: 32px;
+                    height: 32px;
+                    &:hover{
+                         color: #488BF0;
+                    border: 1px solid #488BF0;
+
+                    }
+                }
+            }
+        }
+        .paging-btn-right {
+        }
+    }
+}

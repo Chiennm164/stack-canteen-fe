@@ -1,0 +1,50 @@
+#options {
+    background-color: #f4f4f4;
+    border-top: 1px solid #d7d7d7;
+    .option-wrap {
+        display: flex;
+        align-items: center;
+        padding: 24px 0;
+        .group-option {
+            display: flex;
+            .option {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .img-wrap {
+                    border: 10px solid #ededed;
+                    border-radius: 50%;
+                    margin: 0 12px 8px 12px;
+                    img {
+                        padding: 4px;
+                        width: 73px;
+                        height: 73px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+                .name-option {
+                    text-transform: capitalize;
+                }
+                &:hover {
+                    .img-wrap {
+                        border: 10px solid #f5c031;
+                    }
+                    .name-option {
+                        color: #f5c031;
+                    }
+                }
+            }
+        }
+        .btn-left,
+        .btn-right {
+            background: #fff;
+            border-radius: 50%;
+            border: 1px solid #dbdbdb;
+            cursor: pointer;
+            svg {
+                margin: 7px;
+            }
+        }
+    }
+}

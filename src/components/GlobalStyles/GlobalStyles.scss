@@ -1,5 +1,7 @@
 @import 'normalize.css';
 @import url('https://api.fontshare.com/v2/css?f[]=general-sans@200,500,1,300,600,400,700&display=swap" rel="stylesheet');
+@import "~bootstrap/scss/bootstrap";
+
 
 :root {
      --cloer : red;
@@ -17,4 +19,24 @@ body {
     font-family: 'General Sans', sans-serif;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+// title
+.title-l{
+    font-size: 40px;
+}
+.title-m {
+    font-size: 32px;
+}
+.title-s {
+    font-size: 25px;
 }

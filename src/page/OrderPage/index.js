@@ -1,6 +1,14 @@
+import { DefaultLayout } from "~/components/Layout"
+import ListDish from "./ListDish"
 function OrderPage() {
 
-     return (<h1>OrderPage  nè</h1>)
+     return (
+
+          <div>
+               <DefaultLayout />
+               <ListDish />
+          </div>
+     )
 }
 
 export default OrderPage
