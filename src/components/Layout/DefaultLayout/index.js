@@ -3,6 +3,8 @@ import Menu from '../components/Menu';
 import Carousel from '../components/Carousel';
 
 function DefaultLayout() {
+
+
      return (
           <div>
                <Header />

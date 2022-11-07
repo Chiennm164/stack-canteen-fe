@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 
-function OnlyHeader() {
+function OnlyHeaderLayout() {
      return (
           <div>
                <Header />
@@ -8,4 +8,4 @@ function OnlyHeader() {
      );
 }
 
-export default OnlyHeader;
+export default OnlyHeaderLayout;

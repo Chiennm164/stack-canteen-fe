@@ -10,18 +10,22 @@ function Navbar() {
           {
                icon: <BiDish />,
                _name: 'order',
+               src: '/',
           },
           {
                icon: <CgNotes />,
                _name: 'my order',
+               src: '/myOrder',
           },
           {
                icon: <TbMessageDots />,
                _name: 'feedback',
+               src: '/feedBack',
           },
           {
                icon: <FiPhoneCall />,
                _name: 'support',
+               src: '/support',
           }
      ]
 
@@ -30,11 +34,9 @@ function Navbar() {
                {
                     arrMenu.map((arr, i) => {
                          return <div className='col nav' key={i} >
-
                               <div className='wrap'>
                                    <span> {arr.icon} </span>
-                                   <a href='.' alt='nav'> {arr._name}</a>
-
+                                   <a href={arr.src} alt='nav'> {arr._name}</a>
                               </div></div>
                     })
                }

@@ -44,6 +44,11 @@
             cursor: pointer;
             svg {
                 margin: 7px;
+
+            }
+            &:hover{
+                background-color: #f5c031;
+                color: #fff;
             }
         }
     }

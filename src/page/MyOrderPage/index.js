@@ -1,10 +1,9 @@
-import { DefaultLayout } from "~/components/Layout"
-
+import { OnlyHeaderLayout } from "~/components/Layout"
 function MyOrderPage() {
 
      return (<div>
-          <DefaultLayout />
-          <h1>MyOrderPage  nè</h1></div>
+          <OnlyHeaderLayout />
+     </div>
 
      )
 }

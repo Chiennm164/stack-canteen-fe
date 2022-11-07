@@ -1,7 +1,11 @@
 #listDish {
     background-color: #f4f4f4;
+    .show-amount {
+        font-weight: 700;
+        font-size: 20px;
+    }
     .paging {
-     padding: 20px 0;
+        padding: 20px 0;
         display: flex;
         justify-content: center;
         .paging-btn-left,
@@ -13,7 +17,7 @@
             display: flex;
             align-items: center;
             span {
-                padding:4px 8px;
+                padding: 4px 8px;
                 border: 1px solid #dfe3e8;
                 border-radius: 8px;
                 background-color: #fff;
@@ -41,10 +45,9 @@
                     font-weight: 700;
                     width: 32px;
                     height: 32px;
-                    &:hover{
-                         color: #488BF0;
-                    border: 1px solid #488BF0;
-
+                    &:hover {
+                        color: #488bf0;
+                        border: 1px solid #488bf0;
                     }
                 }
             }

@@ -63,7 +63,7 @@ function Carousel() {
                src: Steak
           },
      ]
-     console.log(options);
+     // console.log(options);
      return (
           <div id="options">
                <div className="container">

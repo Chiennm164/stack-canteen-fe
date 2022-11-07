@@ -2,55 +2,32 @@ import { TemplateDish } from "~/components/Template";
 import './lishdish.scss'
 import { AiOutlineLeft } from 'react-icons/ai'
 import { AiOutlineRight } from 'react-icons/ai'
+import fakeListDish from "~/model/FakeDish";
 function ListDish() {
 
+     // console.log(fakeListDish);
 
      return (
           <div id="listDish">
                <div className="container">
                     <div className="row">
-                         <div className="col-4">
-                              <TemplateDish />
+                         <div className="show-amount">
+                              Show 27 healthy menu
                          </div>
-                         <div className="col-4">
-                              <TemplateDish />
-                         </div>
-                         <div className="col-4">
-                              <TemplateDish />
-                         </div>
-                         <div className="col-4">
-                              <TemplateDish />
-                         </div>
-                         <div className="col-4">
-                              <TemplateDish />
-                         </div>
-                         <div className="col-4">
-                              <TemplateDish />
-                         </div> <div className="col-4">
-                              <TemplateDish />
-                         </div>
-                         <div className="col-4">
-                              <TemplateDish />
-                         </div>
-                         <div className="col-4">
-                              <TemplateDish />
-                         </div> <div className="col-4">
-                              <TemplateDish />
-                         </div>
-                         <div className="col-4">
-                              <TemplateDish />
-                         </div>
-                         <div className="col-4">
-                              <TemplateDish />
-                         </div> <div className="col-4">
-                              <TemplateDish />
-                         </div>
-                         <div className="col-4">
-                              <TemplateDish />
-                         </div>
-                         <div className="col-4">
-                              <TemplateDish />
-                         </div>
+                    </div>
+                    <div className="row">
+                         {
+                              fakeListDish.map((item, index) => {
+                                   return (<div key={index} className="col-4">
+                                        <TemplateDish
+                                             src={item.src} name={item.name} des={item.des} star={item.star} time={item.time} allergenic={item.allergenic} price={item.price} like={item.like}
+
+
+                                        />
+                                   </div>)
+                              })
+                         }
+
                     </div>
                     <div className="row">
                          <div className="paging">
