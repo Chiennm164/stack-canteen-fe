@@ -5,15 +5,15 @@ nav {
         flex-direction: column;
         align-items: center;
         .wrap {
-          // width: 100%;
+            // width: 100%;
             color: red;
             cursor: pointer;
-            padding: 30px 10px;
             position: relative;
-            &:hover {
-                &::after{
-                    display: block;
+            display: flex;
 
+            &:hover {
+                &::after {
+                    display: block;
                 }
                 a,
                 span {
@@ -21,7 +21,7 @@ nav {
                 }
             }
             &::after {
-               display: none;
+                display: none;
                 position: absolute;
                 content: '';
                 height: 4px;
@@ -38,6 +38,8 @@ nav {
             a {
                 // font-family: san;
                 color: #575755;
+                padding: 30px 10px;
+
                 text-decoration: none;
                 text-transform: capitalize;
                 font-size: 18px;

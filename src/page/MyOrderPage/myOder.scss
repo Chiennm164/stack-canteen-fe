@@ -1,0 +1,16 @@
+#content{
+     background-color: #f5f5f5;
+     min-height: 400px;
+     .head{
+          display: flex;
+          padding: 20px 0;
+          .text{
+
+          }
+          .sort{
+               width: 100%;
+               display: flex;
+               justify-content: space-between;
+          }
+     }
+}

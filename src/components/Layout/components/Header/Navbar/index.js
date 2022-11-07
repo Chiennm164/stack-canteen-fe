@@ -35,8 +35,8 @@ function Navbar() {
                     arrMenu.map((arr, i) => {
                          return <div className='col nav' key={i} >
                               <div className='wrap'>
-                                   <span> {arr.icon} </span>
-                                   <a href={arr.src} alt='nav'> {arr._name}</a>
+
+                                   <a href={arr.src} alt='nav'>  <span> {arr.icon} </span>{arr._name}</a>
                               </div></div>
                     })
                }

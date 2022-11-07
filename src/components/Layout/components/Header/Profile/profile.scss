@@ -24,6 +24,8 @@
     }
     p {
         padding-right: 10px;
+        font-weight: 700;
+
     }
     .avatar {
         border: 8px solid #f8f8f8;
@@ -53,6 +55,7 @@
             border: 1px solid #c4c4c4;
             right: 0;
             background-color: #fff;
+            z-index: 9999;
             .tab-wrap {
                 padding: 12px 16px;
                 display: flex;
