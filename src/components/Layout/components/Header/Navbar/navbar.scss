@@ -49,3 +49,24 @@ nav {
         }
     }
 }
+.acctive-menu {
+    &:hover {
+        &::after {
+            display: block;
+        }
+        a,
+        span {
+            color: #f5c031;
+        }
+    }
+    &::after {
+        display: none;
+        position: absolute;
+        content: '';
+        height: 4px;
+        bottom: 0;
+        width: 149px;
+        left: 0;
+        background-color: #f5c031;
+    }
+}

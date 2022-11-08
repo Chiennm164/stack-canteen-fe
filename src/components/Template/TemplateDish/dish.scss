@@ -19,7 +19,7 @@
                     border-radius: 10px;
                     object-fit: cover;
                 }
-                span {
+                .like-element {
                     position: absolute;
                     left: 5%;
                     background-color: #fff;
@@ -31,10 +31,13 @@
                     align-items: center;
                     top: 5%;
                     cursor: pointer;
-                    svg {
-                        width: 20px;
-                        height: 20px;
-                        fill: #2d5d8c;
+
+                    span {
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                            fill: #2d5d8c;
+                        }
                     }
                     &:hover {
                         background-color: #f5c031;
@@ -44,6 +47,7 @@
                     }
                 }
             }
+
             .content {
                 display: flex;
                 flex-direction: column;
@@ -92,8 +96,7 @@
                 position: absolute;
                 bottom: 0%;
                 right: 0%;
-                background-color: #25da37;
-                // background-color: #f5c031;
+                background-color: #f5c031;
                 border-radius: 10px;
                 width: 40px;
                 height: 40px;
@@ -113,4 +116,14 @@
             }
         }
     }
+}
+
+.btnLike {
+    background-color: #f5c031 !important;
+    svg {
+        fill: #fff !important;
+    }
+}
+.btn-add {
+    background-color: #25da37 !important;
 }

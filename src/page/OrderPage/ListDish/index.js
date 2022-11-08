@@ -2,11 +2,10 @@ import { TemplateDish } from "~/components/Template";
 import './lishdish.scss'
 import { AiOutlineLeft } from 'react-icons/ai'
 import { AiOutlineRight } from 'react-icons/ai'
-import fakeListDish from "~/model/FakeDish";
-function ListDish() {
+// import fakeListDish from "~/model/FakeDish";
 
-     // console.log(fakeListDish);
-
+function ListDish(props) {
+     let lishdish = props.data
      return (
           <div id="listDish">
                <div className="container">
@@ -17,12 +16,9 @@ function ListDish() {
                     </div>
                     <div className="row">
                          {
-                              fakeListDish.map((item, index) => {
+                              lishdish.map((item, index) => {
                                    return (<div key={index} className="col-4">
-                                        <TemplateDish
-                                             src={item.src} name={item.name} des={item.des} star={item.star} time={item.time} allergenic={item.allergenic} price={item.price} like={item.like}
-
-
+                                        <TemplateDish data={item}
                                         />
                                    </div>)
                               })

@@ -7,10 +7,11 @@
         .list {
             display: flex;
             justify-content: center;
-            a {
+            button {
                 letter-spacing: 0.5px;
                 padding: 6px 24px;
                 color: #444;
+                border: none;
                 background-color: #ededed;
                 border-radius: 45px;
                 margin-right: 16px;
