@@ -3,22 +3,23 @@ import { AiOutlineShoppingCart } from 'react-icons/ai'
 import './menu.scss'
 import fakeListDish from '~/model/FakeDish'
 function Menu(props) {
+     console.log(props.listOrder);
      const listMenu = [
           {
                id: 1,
-               value: 'lunch',
+               value: 'Lunch',
           },
           {
                id: 2,
-               value: 'dinner',
+               value: 'Dinner',
           },
           {
                id: 3,
-               value: 'breakfast',
+               value: 'Breakfast',
           },
           {
                id: 4,
-               value: 'snacks',
+               value: 'Snacks',
           }
           ,
           {
@@ -27,15 +28,18 @@ function Menu(props) {
 
           }
      ]
-
-     const handlerData = (e) => {
+     const handlerData = (e, id, value) => {
+          document.querySelectorAll('.btn-m').forEach((menu) => {
+               menu.classList.remove('active-menu')
+          })
+          e.currentTarget.classList.toggle('active-menu');
           let dataSend = []
-          switch (e) {
+          switch (id) {
                case 1:
                case 2:
                case 3:
                case 4:
-                    dataSend = fakeListDish.filter((item) => item.mealTime === e)
+                    dataSend = fakeListDish.filter((item) => item.mealTime === id)
                     break;
                case 5:
                     dataSend = fakeListDish.filter((item) => item.like === true)
@@ -43,7 +47,7 @@ function Menu(props) {
                default:
                     break;
           }
-          props.sendData(dataSend)
+          props.sendData(dataSend, value)
      }
 
 
@@ -56,9 +60,9 @@ function Menu(props) {
                                    {
                                         listMenu.map((item, index) => {
                                              if (item.id === 5) {
-                                                  return (<button key={index} onClick={(e) => { handlerData(item.id) }} ><span><BsSuitHeart /></span>{item.value}</button>)
+                                                  return (<button className='btn-m ' key={index} onClick={(e) => { handlerData(e, item.id, item.value) }} ><span><BsSuitHeart /></span>{item.value}</button>)
                                              } else {
-                                                  return (<button key={index} onClick={(e) => { handlerData(item.id) }}> {item.value}</button>)
+                                                  return (<button className='btn-m ' key={index} onClick={(e) => { handlerData(e, item.id, item.value) }}> {item.value}</button>)
                                              }
                                         })
                                    }
@@ -68,7 +72,7 @@ function Menu(props) {
                                         <AiOutlineShoppingCart />
                                    </span>
                                    <div className='cart-num'>
-                                        2
+                                        {props.listOrder.length >= 0 ? props.listOrder.length : 0}
                                    </div>
                               </div>
                          </div>

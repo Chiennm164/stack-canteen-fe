@@ -7,6 +7,8 @@
         padding: 24px 0;
         .group-option {
             display: flex;
+            cursor: pointer;
+
             .option {
                 display: flex;
                 flex-direction: column;

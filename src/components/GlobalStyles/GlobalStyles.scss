@@ -1,14 +1,13 @@
 @import 'normalize.css';
 @import url('https://api.fontshare.com/v2/css?f[]=general-sans@200,500,1,300,600,400,700&display=swap" rel="stylesheet');
-@import "~bootstrap/scss/bootstrap";
-
+@import '~bootstrap/scss/bootstrap';
 
 :root {
-     --cloer : red;
+    --cloer: red;
 }
 
 * {
-     box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
@@ -21,17 +20,17 @@ body {
     text-rendering: optimizeSpeed;
 }
 
-p{
+p {
     padding: 0;
     margin: 0;
 }
-a{
+a {
     text-decoration: none;
     color: #000;
 }
 
 // title
-.title-l{
+.title-l {
     font-size: 40px;
 }
 .title-m {
@@ -39,4 +38,37 @@ a{
 }
 .title-s {
     font-size: 25px;
+}
+.active-nav {
+    color: #f5c031 !important;
+    &::after {
+        display: block !important;
+    }
+    a,
+    span {
+        color: #f5c031 !important;
+    }
+    &::after {
+        display: none ;
+        position: absolute ;
+        content: '';
+        height: 4px;
+        bottom: 0;
+        width: 149px;
+        left: 0;
+        background-color: #f5c031 !important;
+    }
+}
+
+.active-menu {
+    background-color: #f5c031 !important;
+    color: #fff !important;
+}
+.active-option {
+    .img-wrap {
+        border: 10px solid #f5c031 !important;
+    }
+    .name-option {
+        color: #f5c031 !important;
+    }
 }

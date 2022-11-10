@@ -21,7 +21,7 @@ const fakeListDish = [
           time: '12 mm',
           star: ' 4.5 / 755',
           allergenic: 'egg',
-          group: ['a', 'b'],
+          group: ['Asian', 'Chicken', 'Alcohol', 'Pasta'],
      },
      {
           id: 2,
@@ -35,7 +35,7 @@ const fakeListDish = [
           time: '12 mm',
           star: ' 4.5 / 755',
           allergenic: 'egg',
-          group: ['a', 'b'],
+          group: ['Asian', 'Chicken', 'Beverages', 'Pasta'],
      },
      {
           id: 3,
@@ -49,7 +49,7 @@ const fakeListDish = [
           time: '12 mm',
           star: ' 4.5 / 755',
           allergenic: 'egg',
-          group: ['a', 'b'],
+          group: ['Asian', 'Chicken', 'Alcohol', 'Pasta'],
      },
      {
           id: 4,
@@ -63,7 +63,7 @@ const fakeListDish = [
           time: '12 mm',
           star: ' 4.5 / 755',
           allergenic: 'egg',
-          group: ['a', 'b'],
+          group: ['Asian', 'Chicken', 'Beverages', 'Pasta'],
      },
      {
           id: 5,
@@ -77,7 +77,7 @@ const fakeListDish = [
           time: '12 mm',
           star: ' 4.5 / 755',
           allergenic: 'egg',
-          group: ['a', 'b'],
+          group: ['Asian', 'Chicken', 'Beverages', 'Pasta'],
      },
      {
           id: 6,
@@ -91,7 +91,7 @@ const fakeListDish = [
           time: '12 mm',
           star: ' 4.5 / 755',
           allergenic: 'egg',
-          group: ['a', 'b'],
+          group: ['Asian', 'Chicken', 'Beverages', 'Pasta'],
      },
      {
           id: 7,
@@ -105,7 +105,7 @@ const fakeListDish = [
           time: '12 mm',
           star: ' 4.5 / 755',
           allergenic: 'egg',
-          group: ['a', 'b'],
+          group: ['Asian', 'Chicken', 'Alcohol', 'Pasta'],
      },
      {
           id: 8,
@@ -119,7 +119,7 @@ const fakeListDish = [
           time: '12 mm',
           star: ' 4.5 / 755',
           allergenic: 'egg',
-          group: ['a', 'b'],
+          group: ['Asian', 'Chicken', 'Beverages', 'Pasta'],
      },
      {
           id: 9,
@@ -133,7 +133,7 @@ const fakeListDish = [
           time: '12 mm',
           star: ' 4.5 / 755',
           allergenic: 'egg',
-          group: ['a', 'b'],
+          group: ['Asian', 'Chicken', 'Alcohol', 'Pasta'],
      },
 
 ]

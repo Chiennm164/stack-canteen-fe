@@ -14,7 +14,7 @@ import './carousel.scss'
 import { BsChevronLeft } from 'react-icons/bs'
 import { BsChevronRight } from 'react-icons/bs'
 
-function Carousel() {
+function Carousel(props) {
 
      const options = [
 
@@ -63,7 +63,16 @@ function Carousel() {
                src: Steak
           },
      ]
-     // console.log(options);
+
+
+     function handlerOption(e, val) {
+          props.senData(val)
+
+          document.querySelectorAll('.option').forEach((option) => {
+               option.classList.remove('active-option')
+          })
+          e.currentTarget.classList.toggle('active-option');
+     }
      return (
           <div id="options">
                <div className="container">
@@ -76,7 +85,7 @@ function Carousel() {
                                    {
                                         options.map((ot, index) => {
                                              return (
-                                                  <div key={index} className="option">
+                                                  <div onClick={(e) => { handlerOption(e, ot._name) }} key={index} className="option">
                                                        <div className="img-wrap">
                                                             <img src={ot.src} alt="a" />
                                                        </div>

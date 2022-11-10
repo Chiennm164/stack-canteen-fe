@@ -7,18 +7,42 @@ import { useState } from 'react'
 
 
 function OrderPage() {
-     const [state, setState] = useState(fakeListDish)
-     function handlerData(val) {
+
+     const [stateList, setStateList] = useState(fakeListDish);
+     const [stateSt, setStateSt] = useState('All');
+     const [lcart, setLCart] = useState(0);
+
+
+
+     function handlerDataMenu(val, st) {
           if (val) {
-               setState(val)
+               setStateList(val)
+               setStateSt(st)
           }
+     }
+
+     function handlerDataOption(val) {
+          let data = []
+          fakeListDish.forEach((item) => {
+               item.group.forEach((item2) => {
+                    if (item2 === val) {
+                         data.push(item)
+                    }
+               })
+          })
+          setStateList(data)
+          setStateSt(val)
+
+     }
+     function handlerSttCart(params) {
+          setLCart(params)
      }
      return (
           <div>
                <DefaultLayout />
-               <Menu sendData={handlerData} />
-               <Carousel />
-               <ListDish data={state} />
+               <Menu sendData={handlerDataMenu} listOrder={lcart} />
+               <Carousel senData={handlerDataOption} />
+               <ListDish data={stateList} st={stateSt} stt={handlerSttCart} />
           </div>
      )
 }

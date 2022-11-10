@@ -9,7 +9,7 @@ import fakeListDish from '~/model/FakeDish'
 import './dish.scss'
 import { useState } from 'react'
 function TemplateDish(props) {
-
+     // console.log(props);
      let data = props.data
      function btnLike(id, e) {
           let a = e.currentTarget.classList.toggle("btnLike");
@@ -31,14 +31,19 @@ function TemplateDish(props) {
      }
      const [stateAdd, setStateAdd] = useState('false')
 
-     function btnAdd(e) {
+     function btnAdd(e, data) {
           let a = e.currentTarget.classList.toggle('btn-add')
           if (a === true) {
                setStateAdd(false)
+               props.add(data)
+
           } else {
                setStateAdd(true)
+               props.delete(data)
+
           }
      }
+
 
      function handlerAddBtn() {
           if (stateAdd === false) {
@@ -67,7 +72,7 @@ function TemplateDish(props) {
                               <div className="check"><span><GoPrimitiveDot /></span>{data.allergenic} </div>
                               <div className="price">{data.price}</div>
                          </div>
-                         <div onClick={(e) => { btnAdd(e) }} className='btn-card'>
+                         <div onClick={(e) => { btnAdd(e, data) }} className='btn-card'>
                               {
                                    handlerAddBtn()
                               }

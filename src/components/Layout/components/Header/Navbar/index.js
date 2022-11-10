@@ -39,14 +39,21 @@ function Navbar() {
 
 
 
-
+     function handlerClickNav(e) {
+          document.querySelectorAll('.nav-item').forEach((option) => {
+               option.classList.remove('active-nav')
+          })
+          e.currentTarget.classList.toggle('active-nav');
+     }
      return (
           <nav >
                {
                     arrMenu.map((arr, i) => {
-                         return (<div className='col nav' key={i} >
-                              <div className='wrap'>
-                                   <a href={arr.src} alt='nav' >  <span> {arr.icon} </span>{arr._name}</a>
+                         return (<div className='col nav ' key={i} >
+                              <div className='wrap '>
+                                   <a onClick={(e) => {
+                                        handlerClickNav(e)
+                                   }} className={arr.selected === true ? "nav-item active-nav" : "nav-item "} href={arr.src} alt='nav' >  <span> {arr.icon} </span>{arr._name}</a>
                               </div>
                          </div>)
                     })
